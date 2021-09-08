@@ -61,19 +61,19 @@
 
 #     # numero loteria
 
-# puts " ingrese numeros para la loteria"
-# puts "minimo"
-# min = gets.chomp.to_i
-# puts "Maximo"
-# max = gets.chomp.to_i
-# ncan = 0
-# puts "cantidad de numeros"
-# ncan = gets.chomp.to_i
-# for x in 1..ncan
-#    print "Sorteo : #{x} " 
-#    puts "N: #{rand(min..max)}"
+puts " ingrese numeros para la loteria"
+puts "minimo"
+min = gets.chomp.to_i
+puts "Maximo"
+max = gets.chomp.to_i
+ncan = 0
+puts "cantidad de numeros"
+ncan = gets.chomp.to_i
+for x in 1..ncan
+   print "Sorteo : #{x} " 
+   puts "N: #{rand(min..max)}"
    
-# end
+end
 
 
 
