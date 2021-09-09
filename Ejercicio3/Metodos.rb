@@ -1,5 +1,5 @@
-# numeros = 0
-# resultado = 0
+numeros = 0
+resultado = 0
 
 # #eje1
 # def dividir_entre_digitos(numeros_params)
@@ -76,39 +76,103 @@
 
 
 
-def generador_de_arreglos_10()
-    arreglo = []
-    for i in 0..9
-        arreglo << rand(0..100)
+# def generador_de_arreglos_10()
+#     arreglo = []
+#     for i in 0..9
+#         arreglo << rand(0..100)
+#     end
+#     return arreglo
+# end
+
+# def generador_de_arreglos_n(n)
+#     arreglo = []
+#     for i in 0..n-1
+#         arreglo << rand(0..100)
+#     end
+#     return arreglo
+# end
+
+# def generador_de_arreglos_variables(np,min,max)
+#     arreglo = []
+#     for i in 0..np-1
+#         arreglo << rand(min..max)
+#     end
+#     return arreglo
+# end
+
+
+
+
+# puts "Ingrese el largo del arreglo"
+# np = gets.chomp.to_i
+# puts "Ingrese el minimo del rango"
+# min = gets.chomp.to_i
+# puts "Ingrese el máximo del rango"
+# max = gets.chomp.to_i
+
+# print generador_de_arreglos_variables(np,min,max)
+# puts
+
+
+# #eje1
+n = 0
+def sum_dig(nu)
+    if nu < 0
+        nu *= -1
     end
-    return arreglo
+    n = 0
+    sum = 0
+    nu.digits.each do |n|
+    sum += n
+    end
+    return sum
+end 
+
+def multiplos5(numeros_p)
+resultado = numeros_p % 5 == 0 
+return resultado
 end
 
-def generador_de_arreglos_n(n)
-    arreglo = []
-    for i in 0..n-1
-        arreglo << rand(0..100)
-    end
-    return arreglo
+def saldo(numeros_p)
+if numeros_p < 120 
+resultado = 120 - numeros_p - 0.5
+else 
+puts "Sin Saldo"
+end
+return resultado
 end
 
-def generador_de_arreglos_variables(np,min,max)
-    arreglo = []
-    for i in 0..np-1
-        arreglo << rand(min..max)
-    end
-    return arreglo
+#menu
+din = 0
+op = 0
+print "Elija su opción del menú "
+puts "1-Banco ; 2-Suma ; 3-Capicúa ; 4-Salir"
+op = gets.chomp.to_i   
+while op != 4
+    if op == 1 
+puts "¿Cuánto dinero desea retirar?"
+din = gets.chomp.to_i
+#print multiplos5(din) 
+if multiplos5(din) == true
+puts saldo(din)
+end
+end
+if op == 2
+    puts "ingrese un numero"
+    n = gets.chomp.to_i
+    print "su suma es : "
+    puts sum_dig(n)
 end
 
+ if op == 3
+    puts "utilicen el capicua de Marcos"
+ end
+#system ("clear")
+print "Elija su opción del menú "
+puts "1-Banco ; 2-Suma ; 3-Capicúa ; 4-Salir"
+op = gets.chomp.to_i 
+end
+puts " --------------------- "
+puts " gracias "
 
 
-
-puts "Ingrese el largo del arreglo"
-np = gets.chomp.to_i
-puts "Ingrese el minimo del rango"
-min = gets.chomp.to_i
-puts "Ingrese el máximo del rango"
-max = gets.chomp.to_i
-
-print generador_de_arreglos_variables(np,min,max)
-puts
